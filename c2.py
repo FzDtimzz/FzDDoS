@@ -24,7 +24,7 @@ proxys = open('proxies.txt').readlines()
 bots = len(proxys) 
 
 def si():
-    print(f"         \x1b]2;ZxC C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07")
+    print(f"         \x1b]2;FzD C2 --> Stars: [{bots}] | Online Users: [1] | Methods: [25] | Bypass: [10] | Amps: [1]\x07")
     print("")
 
 def tools():
