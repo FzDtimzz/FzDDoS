@@ -1,6 +1,6 @@
 <div align=center>
  
-# 🚀 ZxCDDoS: Release v0.1 - Free DDoS Panel 🚀
+# 🚀 fZdDoS: Release v0.1 - Free DDoS Panel 🚀
 
 <p>
  <img src="https://img.shields.io/github/stars/hoaan1995/ZxCDDoS?color=%23DF0067&style=for-the-badge"/> &nbsp;
@@ -9,9 +9,8 @@
  
 </p>
 
-> Terminal only accepts ANSI color.<br>
-> Username: admin<br>
-> Password: admin<br>
+> Username: botnet<br>
+> Password: botnet<br>
 <p align="center">  <a href="https://t.me/realzer0hub"><img width="160" height="50" src="https://i.imgur.com/N7AK7XY.png"></a></p>
  
 ## Language</br>
@@ -20,7 +19,7 @@
  </div>
  
  ## Logs</br>
- - NEW OVH-BEAM METHODS!
+ - NEW BOTNET METHODS!
  - Hi all, there are fools scam tool github for 20usd
 - Image scammer:
 https://i.ibb.co/R0NDXnc/photo-2022-05-23-03-57-37.jpg
