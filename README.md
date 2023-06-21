@@ -20,7 +20,8 @@
  
  ## Logs</br>
  - NEW BOTNET METHODS!
- - Hi all, there are fools scam tool github for 20usd
+ - NEW APIKEY PER USER!
+ - DONT RESELL THIS TOOLS! 
 
 # Tree
 * [Read now pls](#README)
